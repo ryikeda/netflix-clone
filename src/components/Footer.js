@@ -15,10 +15,10 @@ const Footer = () => {
         </a>
       </div>
       <a href="https://github.com/ryikeda/netflix-clone" target="_data">
-        <img src={githubLogo}></img>
+        <img src={githubLogo} alt="github"></img>
       </a>
       <a href="https://www.linkedin.com/in/rafael-ikeda/" target="_data">
-        <img src={linkedinLogo}></img>
+        <img src={linkedinLogo} alt="linkedin"></img>
       </a>
     </div>
   );

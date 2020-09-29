@@ -3,6 +3,11 @@ import "./FeaturedMovie.css";
 
 const FeaturedMovie = ({ movie }) => {
   const airDate = new Date(movie.first_air_date);
+  // make overview smaller if necessary
+  let overview = movie.overview;
+  if (overview.length > 200) {
+    overview = overview.substring(0, 200) + "...";
+  }
   const genres = [];
   for (let i in movie.genres) {
     genres.push(movie.genres[i].name);
@@ -30,7 +35,7 @@ const FeaturedMovie = ({ movie }) => {
               {movie.number_of_seasons !== 1 ? "s" : ""}
             </div>
           </div>
-          <div className="FeaturedMovie-overview">{movie.overview}</div>
+          <div className="FeaturedMovie-overview">{overview}</div>
           <div className="FeaturedMovie-buttons">
             <a
               href={`/watch/${movie.id}`}
