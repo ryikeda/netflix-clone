@@ -69,7 +69,7 @@ export default {
       },
       {
         slug: "documentary",
-        title: "Documentatios",
+        title: "Documentaries",
         items: await fetchData(
           `/discover/movie?with_genres=99&api_key=${API_KEY}`
         ),
