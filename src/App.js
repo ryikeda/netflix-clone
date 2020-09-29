@@ -5,6 +5,7 @@ import "./App.css";
 import Header from "./components/Header";
 import MovieRow from "./components/MovieRow";
 import FeaturedMovie from "./components/FeaturedMovie";
+import Spinner from "./components/Spinner";
 import Footer from "./components/Footer";
 
 /*
@@ -76,6 +77,8 @@ function App() {
           />
         ))}
       </section>
+      {moviesList.length <= 0 && <Spinner />}
+
       <Footer />
     </div>
   );
