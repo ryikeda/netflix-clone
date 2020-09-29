@@ -1,0 +1,14 @@
+.FeaturedMovie {
+  height: 100vh;
+}
+
+.FeaturedMovie-overlay-y {
+  width: inherit;
+  height: inherit;
+  background: linear-gradient(to top, #111 10%, transparent 90%);
+}
+.FeaturedMovie-overlay-x {
+  width: inherit;
+  height: inherit;
+  background: linear-gradient(to right, #111 30%, transparent 70%);
+}
