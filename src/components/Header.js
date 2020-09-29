@@ -7,7 +7,7 @@ const Header = ({ darkHeader }) => {
   return (
     <div className={`Header${darkHeader ? " black" : ""}`}>
       <div className="Header-logo">
-        <a href="/">
+        <a href="/netflix-clone">
           <img src={logo} alt="logo"></img>
         </a>
       </div>

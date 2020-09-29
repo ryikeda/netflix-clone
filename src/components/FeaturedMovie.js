@@ -37,16 +37,10 @@ const FeaturedMovie = ({ movie }) => {
           </div>
           <div className="FeaturedMovie-overview">{overview}</div>
           <div className="FeaturedMovie-buttons">
-            <a
-              href={`/watch/${movie.id}`}
-              className="FeaturedMovie-watchbutton"
-            >
+            <a href={`/netflix-clone`} className="FeaturedMovie-watchbutton">
               ► Watch
             </a>
-            <a
-              href={`/add/${movie.id}`}
-              className="FeaturedMovie-playlistbutton"
-            >
+            <a href={`/netflix-clone`} className="FeaturedMovie-playlistbutton">
               + Playlist
             </a>
           </div>
