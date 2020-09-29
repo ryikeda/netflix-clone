@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Tmdb from "./Tmdb";
 import "./App.css";
 
+import Header from "./components/Header";
 import MovieRow from "./components/MovieRow";
 import FeaturedMovie from "./components/FeaturedMovie";
 
@@ -25,6 +26,7 @@ App Structure:
 function App() {
   const [moviesList, setMoviesList] = useState([]);
   const [featuredMovie, setFeaturedMovie] = useState(null);
+  const [darkHeader, setDarkHeader] = useState(false);
 
   useEffect(() => {
     const loadData = async () => {
@@ -43,8 +45,25 @@ function App() {
     };
     loadData();
   }, []);
+
+  useEffect(() => {
+    const scrollListener = () => {
+      if (window.scrollY > 10) {
+        setDarkHeader(true);
+      } else {
+        setDarkHeader(false);
+      }
+    };
+
+    window.addEventListener("scroll", scrollListener);
+
+    return () => {
+      window.removeEventListener("scroll", scrollListener);
+    };
+  }, []);
   return (
     <div className="App">
+      <Header darkHeader={darkHeader} />
       {featuredMovie && <FeaturedMovie movie={featuredMovie} />}
 
       <section className="App-lists">
