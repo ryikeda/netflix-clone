@@ -47,7 +47,7 @@ function App() {
     <div className="App">
       {featuredMovie && <FeaturedMovie movie={featuredMovie} />}
 
-      <section className="lists">
+      <section className="App-lists">
         {moviesList.map((category) => (
           <MovieRow
             key={category.title}
