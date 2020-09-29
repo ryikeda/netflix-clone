@@ -1,0 +1,18 @@
+.Footer {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.Footer a {
+  color: white;
+  text-decoration: none;
+}
+.Footer img {
+  margin: 10px;
+  transform: scale(0.9);
+  transition: all ease 0.2s;
+}
+
+.Footer img:hover {
+  transform: scale(1);
+}

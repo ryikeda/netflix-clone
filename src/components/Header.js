@@ -1,15 +1,14 @@
 import React from "react";
 import "./Header.css";
 
+import logo from "../images/logo.png";
+
 const Header = ({ darkHeader }) => {
   return (
     <div className={`Header${darkHeader ? " black" : ""}`}>
       <div className="Header-logo">
         <a href="/">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Logo_Netflix.png"
-            alt="logo"
-          ></img>
+          <img src={logo} alt="logo"></img>
         </a>
       </div>
       <div className="Header-avatar">

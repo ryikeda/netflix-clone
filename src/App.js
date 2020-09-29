@@ -5,6 +5,7 @@ import "./App.css";
 import Header from "./components/Header";
 import MovieRow from "./components/MovieRow";
 import FeaturedMovie from "./components/FeaturedMovie";
+import Footer from "./components/Footer";
 
 /*
 App Structure:
@@ -75,6 +76,7 @@ function App() {
           />
         ))}
       </section>
+      <Footer />
     </div>
   );
 }
