@@ -81,3 +81,27 @@
   font-size: 18px;
   color: #999;
 }
+
+@media (max-width: 760px) {
+  .FeaturedMovie {
+    height: 90vh;
+  }
+  .FeaturedMovie-name {
+    font-size: 40px;
+  }
+  .FeaturedMovie-info {
+    font-size: 16px;
+  }
+  .FeaturedMovie-overview {
+    font-size: 14px;
+    max-width: 100%;
+    margin-right: 30px;
+  }
+  .FeaturedMovie-playlistbutton,
+  .FeaturedMovie-watchbutton {
+    font-size: 10px;
+  }
+  .FeaturedMovie-genre {
+    font-size: 14px;
+  }
+}
