@@ -1,17 +1,19 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Tmdb from "./Tmdb";
 import "./App.css";
 
 function App() {
+  const [moviesList, setMoviesList] = useState();
+
   useEffect(() => {
     const loadData = async () => {
       // Get full movies list
-      const moviesList = await Tmdb.getMoviesList();
-      console.log(moviesList);
+      const list = await Tmdb.getMoviesList();
+      setMoviesList(list);
     };
     loadData();
   }, []);
-  return <div className="App">Initial setup</div>;
+  return <div className="App"></div>;
 }
 
 export default App;
