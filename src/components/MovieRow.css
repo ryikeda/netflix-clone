@@ -29,3 +29,30 @@
 .MovieRow-movie img:hover {
   transform: scale(1);
 }
+
+.MovieRow-before,
+.MovieRow-next {
+  position: absolute;
+  width: 40px;
+  height: 225px;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0;
+  transition: all ease 0.5s;
+}
+.MovieRow-before {
+  left: 0;
+}
+.MovieRow-next {
+  right: 0;
+}
+
+.MovieRow:hover .MovieRow-before,
+.MovieRow:hover .MovieRow-next {
+  opacity: 1;
+}

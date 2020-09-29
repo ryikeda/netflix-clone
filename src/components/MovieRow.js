@@ -1,10 +1,19 @@
 import React from "react";
 import "./MovieRow.css";
 
+import NavigateBeforeIcon from "@material-ui/icons/NavigateBefore";
+import NavigateNextIcon from "@material-ui/icons/NavigateNext";
+
 const MovieRow = ({ title, items }) => {
   return (
     <div className="MovieRow">
       <h2>{title}</h2>
+      <div className="MovieRow-before">
+        <NavigateBeforeIcon style={{ fontSize: 50 }} />
+      </div>
+      <div className="MovieRow-next">
+        <NavigateNextIcon style={{ fontSize: 50 }} />
+      </div>
       <div className="MovieRow-listarea">
         <div className="MovieRow-list">
           {items.results.length > 0 &&
